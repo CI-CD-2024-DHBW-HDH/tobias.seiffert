@@ -51,7 +51,7 @@ jobs:
       - name: upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
+          name: github-pages-${{ github.run_number }}-${{ github.run_id }}
           path: dist
 
   deploy:
