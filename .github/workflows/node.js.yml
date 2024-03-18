@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [21.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [21.x]
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
@@ -51,7 +51,7 @@ jobs:
       - name: upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages-${{ github.run_number }}-${{ github.run_id }}
+          name: github-pages
           path: dist
 
   deploy:
