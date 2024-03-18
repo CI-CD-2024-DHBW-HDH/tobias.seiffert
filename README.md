@@ -46,19 +46,19 @@ npm run dev
 4. Definiere alle nötigen Manifeste um das erstellte Image auf einem Kubernetes Cluster zu deployen **(5 Punkte)**
 5. Erkläre in eigenen Worten:
    * Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
-   Pods können im deployment je nach bedarf skaliert werden.
+   ```Pods können im deployment je nach bedarf skaliert werden.
    Es kann eine Config-Datei verwendet werden, um den gewünschten Zustand der Anwendung zu beschreiben, Kubernetes kümmert sich um den Rest.
-   Deployments ermöglichen das nahtlose Durchführen von Rolling Updates.
+   Deployments ermöglichen das nahtlose Durchführen von Rolling Updates.```
    * Wofür ein Kubernetes Service gut ist **(2 Punkte)**
-   Durch die lose Kopplung müssen sich Anwendungen nicht direkt mit den Pods verbinden.
+   ```Durch die lose Kopplung müssen sich Anwendungen nicht direkt mit den Pods verbinden.
    Ein Kubernetes service kann einkommenden datenverkehr auf Pods aufteilen um überlastung zu vermeiden.
-   Wenn sich die Anzahl der Pods ändert, aktuallisiert der Service automatisch die Config, damit alle Pods die gleiche Last erhalten.
+   Wenn sich die Anzahl der Pods ändert, aktuallisiert der Service automatisch die Config, damit alle Pods die gleiche Last erhalten.```
    * Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
-   Ein Service-Type LoadBalancer läuft in der Cloud und regelt den eingehenden Zugriff auf die Pods
+   ```Ein Service-Type LoadBalancer läuft in der Cloud und regelt den eingehenden Zugriff auf die Pods
    Ein Ingress-Controller kann eingehenden HTTPS (und HTTP)-Verkehr steuern, sodass verschiedene dienste unter der selben IP-Addresse zusammengefasst werden können. Beispielsweise,wenn mehrere Anwendungen in einem Cluster betrieben werden.
-   Mit NodePort wird ein bestimmter Port auf jedem Node im Kubernetes-Cluster geöffnet und der Service auf diesem Port verfügbar gemacht. So kann man auf die Anwendung zugreifen, indem man die IP-Adresse eines beliebigen Nodes im Cluster und den NodePort verwendet.
+   Mit NodePort wird ein bestimmter Port auf jedem Node im Kubernetes-Cluster geöffnet und der Service auf diesem Port verfügbar gemacht. So kann man auf die Anwendung zugreifen, indem man die IP-Adresse eines beliebigen Nodes im Cluster und den NodePort verwendet.```
 
 ## Zusatzaufgabe:
 
 Definiere einen Kubernetes Job **(2 Punkte)**
-Ein Kubernetes Job ist eine Ressource in Kubernetes, welche dazu verwendet wird, Pods zu erstellen und verwalten, die eine bestimmte Aufgabe erfüllen. Jobs werden normalerweise für einmalige oder zeitgesteuerte Tasks verwendet. Sobald ein Job erstellt wird, werden in Kubernetes Pods erstellt, um vordefinierte Aufgaben zu bearbeiten. Sobald alle Pods erfolgreich beendet wurden, gilt der Job als erfolgreich
+```Ein Kubernetes Job ist eine Ressource in Kubernetes, welche dazu verwendet wird, Pods zu erstellen und verwalten, die eine bestimmte Aufgabe erfüllen. Jobs werden normalerweise für einmalige oder zeitgesteuerte Tasks verwendet. Sobald ein Job erstellt wird, werden in Kubernetes Pods erstellt, um vordefinierte Aufgaben zu bearbeiten. Sobald alle Pods erfolgreich beendet wurden, gilt der Job als erfolgreich```
