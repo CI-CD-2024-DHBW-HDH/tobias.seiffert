@@ -62,3 +62,6 @@ npm run dev
 
 Definiere einen Kubernetes Job **(2 Punkte)**
 > Ein Kubernetes Job ist eine Ressource in Kubernetes, welche dazu verwendet wird, Pods zu erstellen und verwalten, die eine bestimmte Aufgabe erfüllen. Jobs werden normalerweise für einmalige oder zeitgesteuerte Tasks verwendet. Sobald ein Job erstellt wird, werden in Kubernetes Pods erstellt, um vordefinierte Aufgaben zu bearbeiten. Sobald alle Pods erfolgreich beendet wurden, gilt der Job als erfolgreich
+
+
+>Anmerkungen: Lint is nicht im Test job drin, damit der baut. Die ganzen Hotfixes sind auch ein bisschen unelegant. Das gewurschtel mit dem minor-fixes Branch bitte ignorieren.
