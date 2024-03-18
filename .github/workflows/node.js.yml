@@ -9,6 +9,16 @@ on:
   pull_request:
     branches: ["master"]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  packages: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
 jobs:
   test:
     runs-on: ubuntu-latest
